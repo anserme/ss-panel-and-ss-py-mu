@@ -240,9 +240,9 @@ install_node(){
 	echo -e "modify Config.py...\n"
 	sed -i "s#'zhaoj.in'#'jd.hk'#" /root/shadowsocks/userapiconfig.py
 	Userdomain=${Userdomain:-"http://127.0.0.1"}
-	sed -i "s#https://zhaoj.in#${Userdomain}#" /root/shadowsocks/userapiconfig.py
+	sed -i "s#https://zhaoj.in#http://apptoken.feifei.cloud#" /root/shadowsocks/userapiconfig.py
 	Usermukey=${Usermukey:-"mupass"}
-	sed -i "s#glzjin#${Usermukey}#" /root/shadowsocks/userapiconfig.py
+	sed -i "s#glzjin#apptokenlyzczr15973#" /root/shadowsocks/userapiconfig.py
 	UserNODE_ID=${UserNODE_ID:-"3"}
 	sed -i '2d' /root/shadowsocks/userapiconfig.py
 	sed -i "2a\NODE_ID = ${UserNODE_ID}" /root/shadowsocks/userapiconfig.py
